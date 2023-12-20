@@ -4,12 +4,7 @@ provider "helm" {
   }
 }
 
-resource "helm_release" "hello-world" {
-  name       = "hello-world"
-  repository = "https://helm.github.io/examples"
-  chart      = "hello-world"
-
-  values = [
-    file("${path.module}/nginx-values.yaml")
-  ]
+resource "helm_release" "flask-helm-example" {
+  name       = "flask-helm-example"
+  chart      = "./helm/flask-helm-example"
 }

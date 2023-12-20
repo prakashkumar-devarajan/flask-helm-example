@@ -31,9 +31,3 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-        volumeMounts:
-        - mountPath: /app
-          name: flask-helm-example
-      volumes:
-      - name: flask-helm-example
-        emptyDir: {}
