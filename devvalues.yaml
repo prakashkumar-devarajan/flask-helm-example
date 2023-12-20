@@ -1,0 +1,8 @@
+version: latest
+registry: prakashse/my-flask-app
+host: false
+tls:
+    enabled: false
+reload: true
+path: /flask-helm-example
+local: /projects/lukejpreston/flask-helm-example/app
