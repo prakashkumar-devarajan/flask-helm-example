@@ -1,11 +1,15 @@
-FROM python:3.7
+FROM python:3.6
 
-RUN mkdir -p /usr/app
-WORKDIR /usr/app
+# Create app directory
+WORKDIR /app
 
-COPY ./app/requirements.txt /usr/app/requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt
+# Install app dependencies
+COPY src/requirements.txt ./
 
-COPY ./app /usr/app
+RUN pip install -r requirements.txt
 
-WORKDIR /usr
+# Bundle app source
+COPY src /app
+
+EXPOSE 8080
+CMD [ "python", "server.py" ]

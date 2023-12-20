@@ -1,8 +1,3 @@
 version: latest
 registry: registry.hub.docker.com/blah/flask-helm-example
-host: youre-host.com
-path: /
-tls:
-    enabled: true
-    certificate: your-certname
 reload: false
