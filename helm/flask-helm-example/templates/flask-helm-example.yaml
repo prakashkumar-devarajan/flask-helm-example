@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: flask-helm-example
-        image: {{ .Values.registry }}:{{ .Values.version }}
+        image: "{{ .Values.registry }}:{{ .Values.version }}"
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
